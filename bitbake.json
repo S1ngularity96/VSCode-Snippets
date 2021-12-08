@@ -1,0 +1,33 @@
+{
+	// Place your snippets for bitbake here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"File Prepend": {
+		"prefix": "fileextrapaths",
+		"body": [
+			"FILESEXTRAPATHS_prepend := \"\\${THISDIR}/$1\""
+		],
+		"description": "Add Fileextrapahs variable"
+	},
+	"BitBake Header":{
+		"prefix": "header",
+		"body": [
+			"SUMMARY = \"$1\"",
+			"DESCRIPTION = \"$2\"",
+			"SECTION = \"$3\"",
+			"LICENSE = \"$4\""
+		],
+		"description": "Adds summary, description, section and license fields"
+	},
+	"BitBake Tasks":{
+		"prefix": "default_tasks",
+		"body":[
+			"do_configure(){\n}\n",
+			"do_compile(){\n}\n",
+			"do_install(){\n}"
+		],
+		"description": "Adds tasks for configure, compile, install"
+	}
+}
