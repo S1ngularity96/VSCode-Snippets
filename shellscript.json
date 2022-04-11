@@ -1,0 +1,109 @@
+{
+	// Place your snippets for shellscript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"if conditional": {
+		"prefix": "if",
+		"body": [
+			"if [[ ]]; then",
+			"\t#paste code here ...",
+			"fi"
+		],
+		"description": "if conditional"
+	},
+	"if file exists": {
+		"prefix": "iffileexists",
+		"body": [
+			"if [[ -e /your/path ]]; then",
+			"\tpaste code here ...",
+			"fi"
+		],
+		"description": "checks if path exists"
+	},
+	"if file is directory": {
+		"prefix": "ifisdir",
+		"body": [
+			"if [[ -d /your/path ]]; then",
+			"\tpaste code here ...",
+			"fi"
+		],
+		"description": "checks if path is directory"
+	},
+	"if file is file": {
+		"prefix": "ifisfile",
+		"body": [
+			"if [[ -f /your/path ]]; then",
+			"\tpaste code here ...",
+			"fi"
+		],
+		"description": "checks if path is a file"
+	},
+	"for loop": {
+		"prefix": "for",
+		"body": [
+			"for $1 in $2; do",
+			"\tpaste code here...",
+			"done"
+		],
+		"description": "basic for loop"
+	},
+	"for range": {
+		"prefix": "inrange",
+		"body": [
+			"for i in {1...10}; do",
+			"\t echo $i",
+			"done"
+		],
+		"description": "iterate over a range"
+	},
+	"parse body": {
+		"prefix": "parse body",
+		"body": [
+			"while [[ \"\\$1\" =~ ^- && ! \"\\$1\" == \"--\" ]]; do case \\$1 in",
+			"\t-h | --help)",
+			"\t...paste here function",
+			"\texit",
+			"\t;;",
+			"esac; shift; done",
+			"if [[ \"\\$1\" == '--' ]]; then shift; fi"
+		],
+		"description": "create body for parsing options"
+	},
+	"parse string option": {
+		"prefix": "parse string option",
+		"body": [
+			" -o | --option )",
+			"\t shift; string=\\$1",
+			";;"
+		],
+		"description": "parse string option"
+	},
+	"parse flag option": {
+		"prefix": "parse flag option",
+		"body": [
+			"f | --flag )",
+			"\tflag=1",
+			";;"
+		],
+		"description": "parse flag option"
+	},
+	"parse command option": {
+		"prefix": "parse command option",
+		"body": [
+			"-c | --command )",
+			"\t...paste code here",
+			";;"
+		],
+		"description": "parse command option"
+	},
+	"read input": {
+		"prefix": "read input",
+		"body": [
+			"read input",
+			"echo $input"
+		],
+		"description": "read and print input"
+	}
+}
